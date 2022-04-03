@@ -75,6 +75,7 @@ getNewQuestion = () => {
     })
 
     availableQuestions.splice(questionsIndex, 1)
+    // stops the questions from looping
 
     acceptingAnswers = true
 }
