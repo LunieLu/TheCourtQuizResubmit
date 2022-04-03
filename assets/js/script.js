@@ -35,22 +35,6 @@ let questions = [
         choice4: 'Maria V Snyder',
         answer: 1,
     },
-    {
-        question: '',
-        choice1: '',
-        choice2: '',
-        choice3: '',
-        choice4: '',
-        answer: ,
-    },
-    {
-        question: '',
-        choice1: '',
-        choice2: '',
-        choice3: '',
-        choice4: '',
-        answer: ,
-    },
 ]
 
 const SCORE_POINTS = 100
