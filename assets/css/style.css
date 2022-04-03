@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=PT+Serif&display=swap');
+
+/* Heading */
+
+.heading {
+    font-family: 'PT Serif', 'Times New Roman', serif;
+}
+
+/* Body */
+
+body {
+    font-family: 'Merriweather', 'Times New Roman', serif;
+    background: #000;
+    color: #fff;
+}
