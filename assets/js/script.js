@@ -5,11 +5,11 @@ const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
 // document 'links' up variable to id/class section
 
-let currentQuestion = {}
-let acceptingAnswers = true
-let score = 0
-let questionCounter = 0
-let availableQuestions = []
+let currentQuestion = {};
+let acceptingAnswers = true;
+let score = 0;
+let questionCounter = 0;
+let availableQuestions = [];
 
 let questions = [
     {
@@ -92,84 +92,79 @@ let questions = [
         choice4: 'Drowned it',
         answer: 3,
     },
-]
+];
 
-const SCORE_POINTS = 100
-const MAX_QUESTIONS = 10
+const SCORE_POINTS = 100;
+const MAX_QUESTIONS = 10;
 
-startGame = () => {
-    questionCounter = 0
-    score = 0
-    availableQuestions = [...questions]
-    getNewQuestion()
-}
+const startGame = () => {
+    questionCounter = 0;
+    score = 0;
+    availableQuestions = [...questions];
+    getNewQuestion();
+};
 
-getNewQuestion = () => {
+const getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
-        localStorage.setItem('mostRecentScore', score)
-        return window.location.assign('end.html')
+        localStorage.setItem('mostRecentScore', score);
+        return window.location.assign('end.html');
         // this section is the end of the quiz - if no more questions, send user to 'end.html'
     }
     
-    questionCounter++
-    progresstext.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
+    questionCounter++;
+    progresstext.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
     // Increasing the sentence of 'Question 1 of 10' for example
-    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
+    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`;
     // Increasing the width of the progress bar, overwriting css style, with the colour white
 
-    const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
-    //choosing a number between 0 - 2 (as 3 is the current max questions)
-    currentQuestion = availableQuestions[questionsIndex]
+    const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
+    // choosing a number between 0 - 2 (as 3 is the current max questions)
+    currentQuestion = availableQuestions[questionsIndex];
     // deciding a question to show user
-    question.innerText = currentQuestion.question
+    question.innerText = currentQuestion.question;
     // changing text to show the question data from the question array
     
 
     choices.forEach(choice => {
-        const number = choice.dataset['number']
-        choice.innerText = currentQuestion['choice' + number]
-    })
+        const number = choice.dataset.number;
+        choice.innerText = currentQuestion['choice' + number];
+    });
 
-    availableQuestions.splice(questionsIndex, 1)
+    availableQuestions.splice(questionsIndex, 1);
     // stops the questions from looping
 
-    acceptingAnswers = true
-}
+    acceptingAnswers = true;
+};
 
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
-        if(!acceptingAnswers) return
+        if(!acceptingAnswers) return;
 
-        acceptingAnswers = false
-        const selectedChoice = e.target
-        const selectedAnswer = selectedChoice.dataset['number']
+        acceptingAnswers = false;
+        const selectedChoice = e.target;
+        const selectedAnswer = selectedChoice.dataset.number;
 
-        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
+        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
 
         if(classToApply === 'correct') {
-            incrementScore(100)
+            incrementScore(SCORE_POINTS);
         }
 
-        selectedChoice.parentElement.classList.add(classToApply)
+        selectedChoice.parentElement.classList.add(classToApply);
 
         setTimeout(() => {
-            selectedChoice.parentElement.classList.remove(classToApply)
-            getNewQuestion()
+            selectedChoice.parentElement.classList.remove(classToApply);
+            getNewQuestion();
 
-        }, 1000)
-    })
-})
-
-// incrementScore = num => {
-//     score +=num
-//     scoreText.innerText = score
-// }
+        }, 1000);
+    });
+});
 
 function incrementScore(num) {
-    score +=num
+    score +=num;
     // ^ this is short for score = score + num
-    scoreText.innerText = score
+    scoreText.innerText = score;
     // updating score text from score number
 }
 
-startGame()
+startGame();
