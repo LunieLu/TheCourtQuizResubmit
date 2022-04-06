@@ -94,7 +94,82 @@ h3 {
     transform: none;
 }
 
+/* Quiz file styling */
+
+.choice-container {
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    border: solid 1px #fff;
+    border-radius: 6px;
+    font-size: 3rem;
+    min-width: 80rem;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: transform 100ms;
+}
+
+.choice-prefix {
+    padding: 2rem 2.5rem;
+    color: #fff;
+}
+
+.choice-text {
+    padding: 2rem;
+    width: 100%;
+}
+
+.correct {
+    background: #D4AF37;
+    color: #000;
+}
+
+.incorrect {
+    background: #450504;
+}
+
+/* Heads up display */
+
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.hud-main-text {
+    text-align: center;
+}
+
+#progressBar {
+    width: 20rem;
+    height: 3rem;
+    border: 0.2rem solid #fff;
+    margin-top: 2rem;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+#progressBarFull {
+    height: 100%;
+    background: #fff;
+    width: 0%;
+}
+
+@media screen and (max-width: 768px) {
+    .choice-container {
+        min-width: 40rem;
+    }
+}
+
 /* End Page CSS */
+
 .end-form-container {
     width: 100%;
     display: flex;
@@ -131,4 +206,16 @@ input {
 .fa-home {
     margin-left: 1rem;
     font-size: 2rem;
+}
+
+/* High Score page */
+
+#highScoresList {
+    list-style: none;
+    margin-bottom: 4rem;
+}
+
+.high-score {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
 }
