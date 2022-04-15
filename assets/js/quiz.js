@@ -3,7 +3,6 @@ const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progresstext = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
-// document 'links' up variable to id/class section
 
 let currentQuestion = {};
 let acceptingAnswers = true;
@@ -118,7 +117,7 @@ const getNewQuestion = () => {
     // Increasing the width of the progress bar, overwriting css style, with the colour white
 
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
-    // choosing a number between 0 - 2 (as 3 is the current max questions)
+    // choosing a number between 0 - 10 (as 10 is the current max questions)
     currentQuestion = availableQuestions[questionsIndex];
     // deciding a question to show user
     question.innerText = currentQuestion.question;
