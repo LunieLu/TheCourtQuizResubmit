@@ -28,7 +28,7 @@ const saveHighScore = e => {
     highScores.splice(10);
 
     localStorage.setItem('highScores', JSON.stringify(highScores));
-    window.location.href('https://lunielu.github.io/TheCourtQuiz/index.html');
+    window.location.assign('https://lunielu.github.io/TheCourtQuiz/index.html');
 };
 
 function homeBtn() {
