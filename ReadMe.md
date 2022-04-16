@@ -17,26 +17,32 @@ I will go into more detail below about the site and I thank you for taking the t
 
 ## Features
 
-- Index Page
+- __Index Page__
     - Logo
-    - Tag line
-    - Start Quiz
-    - High Scores
+    - Introduction
+    - Buttons
+        - Start Quiz
+        - High Scores
 
-- Quiz Page
+- __Quiz Page__
     - Questions
-    - Progress Bar
-    - Score
+    - Hud
+        - Progress Bar
+        - Score
 
-- End Page
+- __End Page__
     - Final Score
-    - Save Score/Name section
-    - Play Again
-    - Go Home
+    - Buttons
+        - Name Input/Save Function
+        - Play Again
+        - Go Home
+            - Alert Box
 
-- High Scores Page
-    - List of High Scores
-    - Go Home
+- __High Scores Page__
+    - List
+        - Username
+        - Score
+    - Go Home Button
 
 ## Testing
 
