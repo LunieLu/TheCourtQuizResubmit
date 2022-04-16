@@ -219,3 +219,10 @@ input {
     font-size: 2.8rem;
     margin-bottom: 0.5rem;
 }
+
+@media screen and (max-width: 500px) {
+    .container {
+        margin: none;
+        max-width: 40rem;
+    }
+}

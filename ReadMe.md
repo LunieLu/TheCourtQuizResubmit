@@ -78,7 +78,8 @@ I will go into more detail below about the site and I thank you for taking the t
         - Instead of putting '/', I had input '..' instead on the windows.location.assign value.
         - Adjusting '..' and replacing it with '/' rectified the issue, with scores now saving to a local cache and showing on the 'highscores.html' page.
     - Tested again on 16/04 as a final 'testing' phase before submission, found that the 'save' functionality was returning a 404 error.
-        - 
+        - This was due to the windows.location function going to href instead of assign.
+        - I updated this, pushed to the live site and once again tested the functionality and found the issue had been corrected; and that scores were now being saved and values returned on the 'Highscore' page.
 
 - Issues with "Go Home" button alert not directing user back to index.html when clicking "OK"
     - Once a user has completed the quiz, they are redirected to the end.html page; with the option to save their highscore.
