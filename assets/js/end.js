@@ -34,7 +34,7 @@ const saveHighScore = e => {
 function homeBtn() {
     let text = "Are you sure you want to leave without submitting your high score?";
     if (confirm(text) == true) {
-        window.location.href('/index.html')
+        window.location.href = 'https://lunielu.github.io/TheCourtQuiz/index.html';
     } else {
         return;
     }
