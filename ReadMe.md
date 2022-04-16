@@ -81,14 +81,13 @@ I will go into more detail below about the site and I thank you for taking the t
         - This was due to the windows.location function going to href instead of assign.
         - I updated this, pushed to the live site and once again tested the functionality and found the issue had been corrected; and that scores were now being saved and values returned on the 'Highscore' page.
 
+
 - Issues with "Go Home" button alert not directing user back to index.html when clicking "OK"
     - Once a user has completed the quiz, they are redirected to the end.html page; with the option to save their highscore.
     - I added an alert to pop-up if a user tries clicking 'Go Home' without saving their score.
     - During the testing phase, I found that the redirect was not taking a user back to the index.html page for "The Court Quiz" repo; instead it was just redirecting to a random "index.html" page that returned a 404 Error.
     - I managed to fix this by adjusting the syntax from windows.location.assign to windows.location.href and changing the file path from local files, to the url for the index.html page (https://lunielu.github.io/TheCourtQuiz/index.html).
     - This fixed the problem and users now direct back to the correct index.html page when they click OK on the pop-up from the 'Go Home' button on the end.html page.
-
-### Unfixed Bugs
 
 ## Deployment
 
@@ -112,3 +111,10 @@ I will go into more detail below about the site and I thank you for taking the t
 
 - Basic HTML, CSS & JavaScript Quiz Structure heavily influenced by [YouTube Tutorial by Brian Design](https://youtu.be/f4fB9Xg2JEY)
 - Resources & Tutorials to create JavaScript alerts from [w3schools](https://www.w3schools.com/)
+
+## Acknowledgements
+
+ - The below people/groups helped support and offer advice over the last few weeks whilst creating this project; offering sessions to discuss ideas, problem solve and review JavaScript basics:
+    - Harry Dhillion (Fellow Full Stack Software Development Code Institute Student)
+    - Mike Avgeros (Fellow Full Stack Software Development Code Institute Student)
+    - #london-community Slack Channel
