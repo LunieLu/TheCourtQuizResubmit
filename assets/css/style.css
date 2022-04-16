@@ -221,8 +221,26 @@ input {
 }
 
 @media screen and (max-width: 500px) {
+    h1 {
+        font-size: 5rem;
+        padding-left: 1.5rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
     .container {
         margin: none;
         max-width: 40rem;
+        height: 90vh;
+    }
+
+    .choice-container {
+        font-size: 5rem;
+    }
+
+    * {
+        font-size: 50%;
     }
 }
