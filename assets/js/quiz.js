@@ -140,12 +140,6 @@ choices.forEach(choice => {
     choice.addEventListener('click', e => {
         if(!acceptingAnswers) return;
 
-        progressBarFull = if (width < 100) {
-            width+=10;
-            progressBarFull.style.width = width + '%';
-            progressBarFull.innerHTML = width * 1 + %;
-        }
-
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset.number;
@@ -164,13 +158,22 @@ choices.forEach(choice => {
 
         }, 1000);
     });
+
 });
+
+function move() {
+    if (width < 100) {
+        width+=10;
+        progressBarFull.style.width = width + '%';
+        progressBarFull.innerHTML = width * 1 + '%';
+    };
+};
 
 function incrementScore(num) {
     score +=num;
     // ^ this is short for score = score + num
     scoreText.innerText = score;
     // updating score text from score number
-}
+};
 
 startGame();
