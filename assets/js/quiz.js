@@ -113,11 +113,12 @@ const getNewQuestion = () => {
     questionCounter++;
     progresstext.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
     // Increasing the sentence of 'Question 1 of 10' for example
-    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`;
+    // progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`;
     // Increasing the width of the progress bar, overwriting css style, with the colour white
 
+
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
-    // choosing a number between 0 - 10 (as 10 is the current max questions)
+    // choosing a number between 0 - 9 (as 10 is the current max questions)
     currentQuestion = availableQuestions[questionsIndex];
     // deciding a question to show user
     question.innerText = currentQuestion.question;
@@ -138,6 +139,12 @@ const getNewQuestion = () => {
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
         if(!acceptingAnswers) return;
+
+        progressBarFull = if (width < 100) {
+            width+=10;
+            progressBarFull.style.width = width + '%';
+            progressBarFull.innerHTML = width * 1 + %;
+        }
 
         acceptingAnswers = false;
         const selectedChoice = e.target;

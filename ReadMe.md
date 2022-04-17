@@ -42,7 +42,8 @@ The 'Start Quiz' button will launch the quiz for the user, the 'High Scores' but
 ### ___Quiz Page___
 The main function for the site. The Quiz includes 10 questions, which are randomized for the user and each have 4 answers to choose from, with only 1 correct and 3 incorrect. The user's progress is tracked by a small white bar in the 'HUD' area of the screen, with a statement "Question x of 10" giving the user an indication how many questions they have completed/yet to complete. 
 There is also a score counter within the 'HUD', with users receiving 100 points for each correct answer and 0 points for an incorrect answer. 
-When a user selects a correct answer, the container will turn 'gold'. If it is incorrect, the container will turn red.
+When a user selects a correct answer, the container will turn green. If it is incorrect, the container will turn red.
+
 - HUD (Heads-up Display)
     - Progress Bar
     - Score
