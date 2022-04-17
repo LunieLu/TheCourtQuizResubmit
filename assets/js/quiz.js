@@ -151,7 +151,8 @@ choices.forEach(choice => {
         };
 
         if(classToApply === 'incorrect') {
-            document.getElementsByClassName('correct').style.display = "flex";
+            let correctChoice = question.find(number.dataset === selectedAnswer.correct);
+            correctChoice.style.backgroundColor = "#214f1a";
         };
 
         selectedChoice.parentElement.classList.add(classToApply);
