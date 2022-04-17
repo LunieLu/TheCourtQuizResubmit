@@ -148,11 +148,11 @@ choices.forEach(choice => {
 
         if(classToApply === 'correct') {
             incrementScore(SCORE_POINTS);
-        }
+        };
 
         if(classToApply === 'incorrect') {
             questions.find(correct);
-        }
+        };
 
         selectedChoice.parentElement.classList.add(classToApply);
 
@@ -162,7 +162,6 @@ choices.forEach(choice => {
 
         }, 1000);
     });
-
 });
 
 function incrementScore(num) {
