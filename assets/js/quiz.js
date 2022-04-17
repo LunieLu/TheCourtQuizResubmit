@@ -150,11 +150,6 @@ choices.forEach(choice => {
             incrementScore(SCORE_POINTS);
         };
 
-        if(classToApply === 'incorrect') {
-            let correctChoice = choice.find(ans ==> ans.dataset === selectedAnswer.correct);
-            correctChoice.style.backgroundColor = "#214f1a";
-        };
-
         selectedChoice.parentElement.classList.add(classToApply);
 
         setTimeout(() => {
