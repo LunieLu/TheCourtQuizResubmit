@@ -151,7 +151,7 @@ choices.forEach(choice => {
         };
 
         if(classToApply === 'incorrect') {
-            let correctChoice = question.find(number === selectedAnswer.correct);
+            let correctChoice = choice.find(ans ==> ans.dataset === selectedAnswer.correct);
             correctChoice.style.backgroundColor = "#214f1a";
         };
 
