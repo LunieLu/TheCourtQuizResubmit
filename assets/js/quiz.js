@@ -144,15 +144,15 @@ choices.forEach(choice => {
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset.number;
 
-        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect' && 'correct';
 
         if(classToApply === 'correct') {
             incrementScore(SCORE_POINTS);
         };
 
-        if(classToApply === 'incorrect') {
-            question.answer();
-        };
+        // if(classToApply === 'incorrect') {
+        //     show('correct');
+        // };
 
         selectedChoice.parentElement.classList.add(classToApply);
 
