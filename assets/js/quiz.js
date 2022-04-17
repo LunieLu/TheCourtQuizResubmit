@@ -113,7 +113,7 @@ const getNewQuestion = () => {
     questionCounter++;
     progresstext.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
     // Increasing the sentence of 'Question 1 of 10' for example
-    // progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`;
+    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`;
     // Increasing the width of the progress bar, overwriting css style, with the colour white
 
 
@@ -150,6 +150,10 @@ choices.forEach(choice => {
             incrementScore(SCORE_POINTS);
         }
 
+        if(classToApply === 'incorrect') {
+            questions.find(correct);
+        }
+
         selectedChoice.parentElement.classList.add(classToApply);
 
         setTimeout(() => {
@@ -160,14 +164,6 @@ choices.forEach(choice => {
     });
 
 });
-
-function move() {
-    if (width < 100) {
-        width+=10;
-        progressBarFull.style.width = width + '%';
-        progressBarFull.innerHTML = width * 1 + '%';
-    };
-};
 
 function incrementScore(num) {
     score +=num;

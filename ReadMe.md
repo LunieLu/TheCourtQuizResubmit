@@ -134,6 +134,25 @@ The 'Go Home' button returns the user to the Index/Homepage.
     - I managed to fix this by adjusting the syntax from windows.location.assign to windows.location.href and changing the file path from local files, to the url for the index.html page (https://lunielu.github.io/TheCourtQuiz/index.html).
     - This fixed the problem and users now direct back to the correct index.html page when they click OK on the pop-up from the 'Go Home' button on the end.html page.
 
+### ___Unfixed Bugs___
+
+- I noted that the progress bar starts at 10% width at the beginning of the quiz (On the 1st Question) and goes to 100% before the user has the chance to answer the 10th question.
+    - I attempted to rectify this by adding a function that would update the progress bar everytime a user clicked on a question.
+    - I added the below code to the quiz.js file:
+    ```
+        function move() {
+            if (width < 100) {
+            width+=10;
+            progressBarFull.style.width = width + '%';
+            progressBarFull.innerHTML = width * 1 + '%';
+            };
+        };
+    ```    
+    - I also added the following attribute to the HTML class ```.choice-text```
+    ```
+    onclick="move()"
+    ```
+    - However, I found that this broke the code that was calling the questions through to the front-end; and decided to scrap this functionality for now.
 
 ## __Deployment__
 ---
