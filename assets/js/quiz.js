@@ -151,7 +151,7 @@ choices.forEach(choice => {
         };
 
         if(classToApply === 'incorrect') {
-            question.find('correct');
+            question.answer();
         };
 
         selectedChoice.parentElement.classList.add(classToApply);
