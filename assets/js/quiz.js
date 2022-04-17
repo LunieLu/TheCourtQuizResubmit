@@ -151,7 +151,7 @@ choices.forEach(choice => {
         };
 
         if(classToApply === 'incorrect') {
-            document.getElementsByClassName('correct').style.display = true;
+            document.getElementsByClassName('correct').style.display = "flex";
         };
 
         selectedChoice.parentElement.classList.add(classToApply);
