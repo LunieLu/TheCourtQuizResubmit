@@ -17,10 +17,6 @@ body {
 
 /* headings */
 
-.heading {
-    text-align: center;
-}
-
 h1 {
     font-size: 5.4rem;
     font-family: 'PT Serif', 'Times New Roman', serif;
@@ -33,6 +29,7 @@ h2 {
     font-weight: 200;
     font-size: 4.2rem;
     margin-bottom: 4rem;
+    text-align: center;
 }
 
 h3 {
