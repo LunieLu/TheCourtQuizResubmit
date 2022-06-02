@@ -169,6 +169,24 @@ h3 {
     }
 }
 
+/* Instructions Page CSS Styling */
+
+#instructions {
+    text-align: center;
+    font-size: 2rem;
+    height: 80vh;
+}
+
+ul {
+    font-size: 4rem;
+    line-height: 105%;
+}
+
+#instructions > p {
+    padding: 2%;
+    font-size: 3rem;
+}
+
 /* End Page CSS */
 
 .end-form-container {
