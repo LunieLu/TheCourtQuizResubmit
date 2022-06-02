@@ -232,7 +232,7 @@ input {
     }
 
     .container {
-        margin: none;
+        margin: 0;
         max-width: 40rem;
         height: 90vh;
     }
