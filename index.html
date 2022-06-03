@@ -19,10 +19,26 @@
             <h2>So you think you know A Court of Thorns and Roses?</h2>
             <h3>Test your knowledge with this quiz.</h3>
             <a href="quiz.html" class="btn">Start Quiz</a>
-            <a href="instructions.html" class="btn">How to Play</a>
+            <button class="btn" onclick="on()">How to Play</button>
             <a href="highscores.html" id="highscore-btn" class="btn">High Scores</a>
         </div>
     </section>
+
+    <article id="instructions" class="justify-center flex-column how-to-play" onclick="off()">
+        <h2>How to Play:</h2>
+        <ul>
+            <li>When you click on "Start Quiz", you will be shown a question with 4 possible answers.</li>
+            <li>Please select one answer from the four options.</li>
+            <li>If you get the answer correct, it will turn green.</li>
+            <li>If you get the answer wrong, it will turn red.</li>
+            <li>The quiz will then move onto the next question.</li>
+            <li>There is a maximum of 10 questions and you will receive 100 points for each correct answer.</li>
+            <li>At the end of the quiz, you will be shown your score with the option to enter your name for it to be added to the leaderboard.</li>
+        </ul>
+        <p>Thank you so much for playing "The Court Quiz!"</p>
+    </article>
+    <!-- Javascript file link -->
+    <script src="assets/js/instructions.js"></script> 
 </body>
 
 </html>
