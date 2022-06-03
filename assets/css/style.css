@@ -41,14 +41,24 @@ h3 {
 /* body content */
 
 .container {
-    width: 100vw;
-    height: 88vh;
+    width: 88vw;
+    height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 80rem;
     margin: 0 auto;
     padding: 2rem;
+}
+
+.intro-div {
+    background-color: rgba(239,58,75,0.3);
+}
+
+.quiz-end-div {
+    background-color: rgba(239,58,75,0.3);
+    max-width: 83rem;
+    margin: 5% auto;
 }
 
 .flex-column {
@@ -174,7 +184,7 @@ h3 {
 #instructions {
     position: fixed;
     display: none;
-    height: 75%;
+    height: 85%;
     width: 75%;
     background-color: #2e2e2e;
     cursor: pointer;

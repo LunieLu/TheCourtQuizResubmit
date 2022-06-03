@@ -14,9 +14,19 @@ However, that doesn't mean that I have given up - Merely that this is a stepping
 
 I will go into more detail below about the site and I thank you for taking the time to view this project.
 
-[Link to the Live Project](https://lunielu.github.io/TheCourtQuiz/)
+[Link to the Live Project](https://lunielu.github.io/TheCourtQuizResubmit/)
 
 ![Responsive Site](assets/images/Responsive.PNG)
+
+## __Version 2 - Resubmission (04/06/2022)__
+---
+| __Added Features__ |
+| --- |
+| Test |
+
+| __Validator Testing__ |
+| --- |
+| Test |
 
 ## __Features__
 ---
@@ -131,7 +141,7 @@ The 'Go Home' button returns the user to the Index/Homepage.
     - Once a user has completed the quiz, they are redirected to the end.html page; with the option to save their highscore.
     - I added an alert to pop-up if a user tries clicking 'Go Home' without saving their score.
     - During the testing phase, I found that the redirect was not taking a user back to the index.html page for "The Court Quiz" repo; instead it was just redirecting to a random "index.html" page that returned a 404 Error.
-    - I managed to fix this by adjusting the syntax from windows.location.assign to windows.location.href and changing the file path from local files, to the url for the index.html page (https://lunielu.github.io/TheCourtQuiz/index.html).
+    - I managed to fix this by adjusting the syntax from windows.location.assign to windows.location.href and changing the file path from local files, to the url for the index.html page (https://lunielu.github.io/TheCourtQuizResubmit/).
     - This fixed the problem and users now direct back to the correct index.html page when they click OK on the pop-up from the 'Go Home' button on the end.html page.
 
 ### ___Unfixed Bugs___
@@ -160,15 +170,15 @@ The 'Go Home' button returns the user to the Index/Homepage.
 ___Deploying a GitHub Repository on GitHub Pages___
 
 - The site has been deployed to GitHub pages. The steps to deploy are as follows:
-    - In the GitHub repository menu for [The Court Quiz](https://github.com/LunieLu/TheCourtQuiz), please navigate to the Settings tab.
+    - In the GitHub repository menu for [The Court Quiz](https://github.com/LunieLu/TheCourtQuizResubmit), please navigate to the Settings tab.
     - Under the heading 'Code and Automation', click on Pages.
     - From the source section drop-down menu, select the Main branch.
     - Press the 'Save' button and the site will provide a link to the completed website.
 
-Please view the GitHub pages live link for **The Court Quiz** [here.](https://lunielu.github.io/TheCourtQuiz/index.html)
+Please view the GitHub pages live link for **The Court Quiz** [here.](https://lunielu.github.io/TheCourtQuizResubmit/)
 
 ___Making a Local Clone___
-- Find the GitHub Repository [The Court Quiz](https://github.com/LunieLu/TheCourtQuiz).
+- Find the GitHub Repository [The Court Quiz](https://github.com/LunieLu/TheCourtQuizResubmit).
 - Click the Code button.
 - Copy the URL found under HTTPS.
 - In Gitpod, change the directory to a location that you would like the cloned repo to be located.
@@ -180,6 +190,7 @@ ___Making a Local Clone___
 
 - Basic HTML, CSS & JavaScript Quiz Structure heavily influenced by [YouTube Tutorial by Brian Design](https://youtu.be/f4fB9Xg2JEY)
 - Resources & Tutorials to create JavaScript alerts from [w3schools](https://www.w3schools.com/)
+- **V2 Addition** Background image by Jeremy Perkins on [unsplash.com](https://unsplash.com/photos/uhjiu8FjnsQ)
 
 ## __Acknowledgements__
 ---
@@ -190,7 +201,7 @@ ___Making a Local Clone___
     - #london-community Slack Channel
 
 
-## A Final Note
+## __A Final Note__
 ---
 
 I want to say a huge thank you to anyone reviewing this code and who have taken the time to play my little quiz.
