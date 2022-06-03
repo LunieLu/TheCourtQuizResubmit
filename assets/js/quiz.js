@@ -141,7 +141,7 @@ choices.forEach(choice => {
 
         if(classToApply === 'correct') {
             incrementScore(SCORE_POINTS);
-        };
+        }
 
         selectedChoice.parentElement.classList.add(classToApply);
 
@@ -157,6 +157,6 @@ choices.forEach(choice => {
 function incrementScore(num) {
     score +=num;
     scoreText.innerText = score;
-};
+}
 
 startGame();
