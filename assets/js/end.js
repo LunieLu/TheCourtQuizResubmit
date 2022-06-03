@@ -5,6 +5,13 @@ const mostRecentScore = localStorage.getItem('mostRecentScore');
 
 const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 
+function body() {
+    document.body.style.backgroundImage = "url('assets/images/jeremy-perkins-stars.jpg')";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "cover";
+    }
+document.addEventListener("DOMContentLoaded", body());
+
 finalScore.innerText = mostRecentScore;
 
 username.addEventListener('keyup', () => {

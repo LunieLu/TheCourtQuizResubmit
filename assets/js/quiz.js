@@ -10,6 +10,13 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
+function body() {
+    document.body.style.backgroundImage = "url('assets/images/jeremy-perkins-stars.jpg')";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "cover";
+    }
+document.addEventListener("DOMContentLoaded", body());
+
 let questions = [
     {
         question: 'What is the name of the first court Feyre is taken to as a human?',
