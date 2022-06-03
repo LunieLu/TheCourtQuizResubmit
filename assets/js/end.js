@@ -16,7 +16,11 @@ finalScore.innerText = mostRecentScore;
 
 username.addEventListener('keyup', () => {
     saveScoreBtn.disabled = !username.value;
-    if (username.value == !isNaN) {
+    var letters = '/^[A-Za-z]+$/';
+    if(username.value.match(letters)) {
+        saveScoreBtn.disabled = false;
+    }
+    else {
         saveScoreBtn.disabled = true;
     }
 });
