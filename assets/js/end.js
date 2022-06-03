@@ -16,6 +16,9 @@ finalScore.innerText = mostRecentScore;
 
 username.addEventListener('keyup', () => {
     saveScoreBtn.disabled = !username.value;
+    if (username.value == !isNaN) {
+        saveScoreBtn.disabled = true;
+    }
 });
 
 const saveHighScore = e => {
