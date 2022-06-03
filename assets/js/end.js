@@ -28,13 +28,13 @@ const saveHighScore = e => {
     highScores.splice(10);
 
     localStorage.setItem('highScores', JSON.stringify(highScores));
-    window.location.assign('https://lunielu.github.io/TheCourtQuiz/index.html');
+    window.location.assign('https://lunielu.github.io/TheCourtQuizResubmit/');
 };
 
 function homeBtn() {
     let text = "Are you sure you want to leave without submitting your high score?";
     if (confirm(text) == true) {
-        window.location.href = 'https://lunielu.github.io/TheCourtQuiz/index.html';
+        window.location.href = 'https://lunielu.github.io/TheCourtQuizResubmit/';
     } else {
         return;
     }
