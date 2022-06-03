@@ -14,19 +14,96 @@ However, that doesn't mean that I have given up - Merely that this is a stepping
 
 I will go into more detail below about the site and I thank you for taking the time to view this project.
 
-[Link to the Live Project](https://lunielu.github.io/TheCourtQuizResubmit/)
+### ___04/06/2022 - Resubmission comments___
 
-![Responsive Site](assets/images/Responsive.PNG)
+After review and some great feedback from my assessor, I once again tackled the challenge of updating my JavaScript project for resubmission.
+
+The below additions to this readme go into detail about the new features added, but I request and highly recommend that any new reviewer tries out Version 2 of my quiz first hand.
+
+This second time round, I felt more confident with my JavaScript knowledge, having recently submitted a Python project for my Full Stack Diploma with Code Institute.
+I hope the added functionality to my project and JavaScript files show a growth in my knowledge and more depth and understanding of the JavaScript functions available.
+
+Once again, thank you for taking the time to view this project.
+
+[Link to the Live Project](https://lunielu.github.io/TheCourtQuizResubmit/) - *Updated for 04/06/2022 resubmission*
+
+![Version 2 Responsive Site](assets/images/v2responsive.PNG)
 
 ## __Version 2 - Resubmission (04/06/2022)__
 ---
-| __Added Features__ |
-| --- |
-| Test |
 
-| __Validator Testing__ |
-| --- |
-| Test |
+### __Added Features__
+
+- 'How to Play':
+    - A new 'How to Play' button is now present on the Index page between the 'Start Quiz' and 'High Scores' buttons.
+    - When a user interacts with this button, a pop-up overlay appears to explain to the user how to play the quiz. 
+        - The pop-up can then be closed by clicking on the pop-up with the mouse on pc, or by tapping the screen on a mobile.
+
+![How to Play](assets/images/howtoplay.PNG)
+
+- Updates to every page:
+    - Each page now has a background image of a starry sky, linking into the theme of "The Night Court" from "A Court of Thorns & Roses", photographer credited below.
+    - Due to the added background image, a black box with a border is now present behind all text content to help it stand out from the background.
+    - On the Index page only, the 'Start Quiz' button changes colour to white on mouse hover to indicate its importance.
+
+![Updated Index Page](assets/images/IntroPage.PNG)
+
+- "User name submit" validation:
+    - On the end.html page, a user is prompted to enter their name in a text box to save their score to the leaderboard.
+    - There is now an if statement included in the JavaScript to avoid users entering 'invalid' data, such as white space or numbers when entering their name in the text box.
+        - The save button will continue to be disabled until a user enters their name with letters only.
+        - The input box will accept upper case, lower case or a mix of both.
+
+```
+username.addEventListener('keyup', () => {
+    var letters = new RegExp('[A-Za-z]');
+    if(username.value.match(letters)) {
+        saveScoreBtn.disabled = false;
+    }
+    else {
+        saveScoreBtn.disabled = true;
+    }
+});
+```
+
+### __Validator Testing__
+
+Once again, this site has been tested on the following validators:
+- HTML:
+     - No known errors were returned when passed through the official [W3C Validator](https://validator.w3.org/#validate_by_input)
+
+![HTML Validation Check](assets/images/v2htmlvalidation.PNG)
+
+- CSS:
+    - No known errors were returned when passed through the official [Jigsaw W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+
+![CSS Validation Check](assets/images/v2cssvalidation.PNG)
+
+- Javascript:
+    - All 4 js files were passed through the official [JSHint Validator](https://jshint.com/)
+        - quiz.js file returned no errors.
+        - highscores.js file returned no errors.
+        - instructions.js file returned __4__ errors:
+            - Four unused variables:
+                - ```on```
+                - ```off```
+                - ```start```
+                - ```nostart```
+                    - This is due to these variables being called from the HTML onclick(), onmouseover() and onmouseout() attributes; attached to the "Start Quiz" and "How to Play" button functionality from the index.html file.
+        - end.js file returned __2__ errors:
+            - Two unused variables:
+                - ```14	saveHighScore```
+                - ```34	homeBtn```
+                    - This is due to these variables being pulled from the 'OnClick' functionality in the end.html file.
+
+    - The following metrics were returned on the below files:
+        - Images are ordered: quiz.js, highscores.js, instructions.js and end.js
+
+![quiz.js Validation](assets/images/quizjsvalidation.PNG)
+![highscores.js Validation](assets/images/highscoresjsvalidation.PNG)
+
+![instructions.js Validation](assets/images/instructionsjsvalidation.PNG)
+![end.js Validation](assets/images/endjsvalidation.PNG)
 
 ## __Features__
 ---
@@ -166,19 +243,20 @@ The 'Go Home' button returns the user to the Index/Homepage.
 
 ## __Deployment__
 ---
+*Section updated 04/06/2022 with links for new repo and updated github Pages*
 
 ___Deploying a GitHub Repository on GitHub Pages___
 
 - The site has been deployed to GitHub pages. The steps to deploy are as follows:
-    - In the GitHub repository menu for [The Court Quiz](https://github.com/LunieLu/TheCourtQuizResubmit), please navigate to the Settings tab.
+    - In the GitHub repository menu for [The Court Quiz Resubmit](https://github.com/LunieLu/TheCourtQuizResubmit), please navigate to the Settings tab.
     - Under the heading 'Code and Automation', click on Pages.
     - From the source section drop-down menu, select the Main branch.
     - Press the 'Save' button and the site will provide a link to the completed website.
 
-Please view the GitHub pages live link for **The Court Quiz** [here.](https://lunielu.github.io/TheCourtQuizResubmit/)
+Please view the GitHub pages live link for **The Court Quiz Resubmit** [here.](https://lunielu.github.io/TheCourtQuizResubmit/)
 
 ___Making a Local Clone___
-- Find the GitHub Repository [The Court Quiz](https://github.com/LunieLu/TheCourtQuizResubmit).
+- Find the GitHub Repository [The Court Quiz Resubmit](https://github.com/LunieLu/TheCourtQuizResubmit).
 - Click the Code button.
 - Copy the URL found under HTTPS.
 - In Gitpod, change the directory to a location that you would like the cloned repo to be located.
@@ -190,7 +268,7 @@ ___Making a Local Clone___
 
 - Basic HTML, CSS & JavaScript Quiz Structure heavily influenced by [YouTube Tutorial by Brian Design](https://youtu.be/f4fB9Xg2JEY)
 - Resources & Tutorials to create JavaScript alerts from [w3schools](https://www.w3schools.com/)
-- **V2 Addition** Background image by Jeremy Perkins on [unsplash.com](https://unsplash.com/photos/uhjiu8FjnsQ)
+- **V2 Addition (04/06/2022)** - Background image by Jeremy Perkins on [unsplash.com](https://unsplash.com/photos/uhjiu8FjnsQ)
 
 ## __Acknowledgements__
 ---

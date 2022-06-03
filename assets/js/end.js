@@ -51,4 +51,4 @@ function homeBtn() {
     } else {
         return;
     }
-};
+}
