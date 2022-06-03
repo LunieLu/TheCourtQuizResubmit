@@ -15,8 +15,7 @@ document.addEventListener("DOMContentLoaded", body());
 finalScore.innerText = mostRecentScore;
 
 username.addEventListener('keyup', () => {
-    saveScoreBtn.disabled = !username.value;
-    var letters = '/^[A-Za-z]+$/';
+    var letters = new RegExp('[A-Za-z]');
     if(username.value.match(letters)) {
         saveScoreBtn.disabled = false;
     }
