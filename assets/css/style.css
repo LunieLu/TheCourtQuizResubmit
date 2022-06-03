@@ -271,6 +271,26 @@ input {
         max-width: 40rem;
         height: 90vh;
     }
+    
+    .how-to-play {
+        left: 0;
+    }
+
+    #instructions {
+        width: 100vw;
+        height: 100vh;
+        font-size: 20%;
+    }
+
+    ul {
+        font-size: 3.5rem;
+        line-height: 120%;
+    }
+
+    #instructions > p {
+        padding-top: 5%;
+        font-size: 3rem;
+    }
 
     .choice-container {
         font-size: 5rem;
